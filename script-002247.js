@@ -1,3 +1,4 @@
+
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.content-card');
     const buttons = document.querySelectorAll('.main-nav a');
@@ -37,8 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const sectionId = this.getAttribute('href').substring(1);
             showSection(sectionId);
+            history.replaceState(null, '', '#' + sectionId);
         });
     });
 
-    showSection('portada');
+    const initialSection = window.location.hash.substring(1) || 'portada';
+    showSection(initialSection);
 });
