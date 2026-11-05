@@ -187,7 +187,6 @@ body {
     margin: 4px;
 }
 
-/* PIE DE PÁGINA */
 .site-footer {
     text-align: center;
     padding: 35px 20px;
@@ -200,7 +199,6 @@ body {
     text-decoration: none;
 }
 
-/* NAVEGACIÓN ENTRE SECCIONES */
 .content-card:target {
     display: block;
 }
@@ -231,6 +229,18 @@ body {
         padding: 25px 20px;
     }
 
+.content-card {
+    display: none;
+}
+
+.content-card.active-card {
+    display: block;
+}
+
+.main-nav a.active {
+    background: #174a78;
+    color: white;
+}
     .floating-container {
         flex-direction: column;
     }
